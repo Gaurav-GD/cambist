@@ -97,6 +97,14 @@
 			// echo"<pre>";print_r($data);exit;
 		}
 
+
+
+
+
+
+
+
+
 	}
 
 	// INSERT INTO mytable(Circle,Acct_Ext_Id,Mobile_Number,Total_DelCount,Colln_Manager,Service_Manager,Service_Cambist_RM,Collection_Cambist_RM,VAM,VAM_TL,KAM,KAM_TL,TC,Company_Name,Bill_Name,DepositAmt,Days_0_30,Days_30_60,Days_60_90,Days_90_120,Days_120_150,Days_150_180,Days_180_Above,Balance,PAID,BNC,Total_Due,Invalid_BNC_Data,Age_Bkt,Balance_BD,Collection_Paid_BD,Total_BD,Balance_60,Collection_Paid_60,60Flow,Bill_Period,Value_Type,VIP_Flag,Account_Status,Product_Type,Voice_Status,Service_Line,Dsl_Status,Credit_Limit,RatePlan,Aon,Account_Active_Date,Address,Bill_Zip,Area,Cust_Address,Cust_Phone1,Contact1_Phone,Phone_no,Last_invoice_No,Name,Number,Email_ID,CP_INDV,Category,Base,Original_Total_Due,Suspense_Amount) VALUES ('Mumbai','12418396','Multiple',301,'Cambist agency','0','0','Atish Renose','0','0','0','0','Asmita','Pyramid Consulting Pvt Ltd','',0,11247.23,11398.92,11287.69,158793.42,0,0,0.03,170233.29,22494,NULL,192727.29,'','90+',136106.43,22687.02,158793.45,136106.4,22687.02,158793.42,'W1A','Platinum','Normal','Active','ISDN PRA','Active','PRI','NO_DSL','0','0',91,'15/11/2006','Flat/Plotno ,Floor4,Hamilton Wing A Hiranandani Estate G B Road Patilpada Estate Thane W 400607',400607,'Sandoz Baug','Flat/Plotno ,Floor4,Hamilton Wing A','9833753536',NULL,'',441540052,'','','','CP','AES','TM',192727.29,-22687.02);
