@@ -70,7 +70,7 @@
 	<!-- END PAGE HEADER-->
 	<!-- BEGIN PAGE CONTENT-->
 	<div class="row-fluid">
-		<div class="span12">
+		<!-- <div class="span12">
 			<p>
 				<span class="label label-important">NOTE:</span>&nbsp;
 				This plugins works only on Latest Chrome, Firefox, Safari, Opera & Internet Explorer 10.
@@ -80,7 +80,7 @@
 			?>
 			<?php //echo $this->Form->create('Admin',array("action" => "upload_xls","class"=>"form-horizontal well","type" => "file" ,"inputDefaults" => array("label"=>false,"div" => false,"class"=> "input-xlarge"))); ?>
 
-		</div>
+		</div> -->
 		<div class="row-fluid fileupload-buttonbar">
 			<div class="span7">
 				<!-- The fileinput-button span is used to style the file input field as button -->
@@ -89,15 +89,7 @@
 				<span>Add files...</span>
 				<input type="file" name="files[]" multiple>
 				</span> -->
-				<?php echo $this->Form->input("excell_sheet", array("type" => "file")); ?>
-				<?php
-
-					echo $this->Form->button('<i class="icon-upload icon-white"></i>   Start upload',array('class'=> 'btn blue start','escape' => false));
-					echo $this->Form->button('<i class="icon-ban-circle icon-white"></i>  Cancel upload' , array('class' => 'btn yellow cancel' , 'escape' => false));
-					echo $this->Form->button('<i class="icon-trash icon-white"></i>  Cancel upload' , array('class' => 'btn red delete' , 'escape' => false));
-
-					echo $this->Form->end();
-				?>
+				
 			</div>
 			<!-- The global progress information -->
 			<div class="span5 fileupload-progress fade">
@@ -123,13 +115,16 @@
 		                    </div>
 		                </div>
 		                <div class="form-actions">
-		                    <button class="btn btn-primary" type="submit">Upload</button>
 		                    <?php
-		                        echo $this->Html->link("Cancel",array(
+		                    	echo $this->Form->button('<i class="icon-upload icon-white"></i>   Start upload',array(
+		                    		'class'=> 'btn blue start','escape' => false));
+		                    	echo $this->Form->end();
+		                        echo $this->Html->link('<i class="icon-ban-circle icon-white"></i>  Cancel',array(
 		                                'controller' => 'teamleaders',
 		                                'action'     => 'index'
-		                            ),array('class' => 'btn btn-primary','type' => 'button','escape' => false)
+		                            ),array('class' => 'btn yellow cancel','type' => 'button','escape' => false)
 		                        );
+		                        echo $this->Form->button('<i class="icon-trash icon-white"></i>  Cancel upload' , array('class' => 'btn red delete' , 'escape' => false));
 		                    ?>
 		                </div>
 		            </fieldset>

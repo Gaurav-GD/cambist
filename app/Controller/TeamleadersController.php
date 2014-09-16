@@ -235,12 +235,13 @@
 
 				if($excel->is_file_format_correct()){
 					$excel->add_data();
-					exit;
+					// exit;
 					$excel_error = false;
 				}
 
 	            if($excel_error){
 	              // $this->pre_print($excel->get_sheet_errors());
+	            	print_r('success');
 	            	$this->Session->setFlash('Something went while uploading ! Please try again !!','', array() , 'error');
 	            }
 	            else{
