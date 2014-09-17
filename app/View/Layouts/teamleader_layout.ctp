@@ -209,22 +209,43 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 				</li>
 				<li class="">
 					<a href="javascript:;">
-					<i class=""></i> 
-					<span class="title">Tally Caller</span>
+					<i class=" "></i> 
+					<span class="title">Tele Caller</span>
 					<span class="arrow "></span>
 					</a>
 					<ul class="sub-menu">
 						<li >
-							<?php echo $this->Html->link('View All' , array('controller' => 'tallycallers' , 'action' => 'index')) ; ?>
+							<?php echo $this->Html->link('View All' , array('controller' => 'telecallers' , 'action' => 'index')) ; ?>
 						</li>
 						<li >
-							<?php echo $this->Html->link('Add New' , array('controller' => 'tallycallers' , 'action' => 'add')) ; ?>
+							<?php echo $this->Html->link('Add New' , array('controller' => 'telecallers' , 'action' => 'add')) ; ?>
 						</li>
 					</ul>
 				</li>
-				<li class="last ">
-					<?php echo $this->Html->link('<i class="icon-bar-chart"></i>  Upload Excel' , array( 'controller'=>'teamleaders','action' => 'upload_excel') , array( 'escape' => false )) ; ?>
+				<li class="">
+					<a href="javascript:;">
+					<i class="icon-bar-chart"></i> 
+					<span class="title">Upload Excel</span>
+					<span class="arrow "></span>
+					</a>
+					<ul class="sub-menu">
+						<li >
+							<?php echo $this->Html->link('Master Allocation' , array('controller' => 'teamleaders' , 'action' => 'upload_master_allocation')) ; ?>
+						</li>
+						<li >
+							<?php echo $this->Html->link('Open Invoice' , array('controller' => 'teamleaders' , 'action' => 'upload_open_invoice')) ; ?>
+						</li>
+						<li >
+							<?php echo $this->Html->link('A&O' , array('controller' => 'teamleaders' , 'action' => 'upload_ao')) ; ?>
+						</li>
+						<li >
+							<?php echo $this->Html->link('BD' , array('controller' => 'teamleaders' , 'action' => 'upload_bd')) ; ?>
+						</li>
+					</ul>
 				</li>
+				<!-- <li class="last ">
+					<?php echo $this->Html->link('<i class="icon-bar-chart"></i>  Upload Excel' , array( 'controller'=>'teamleaders','action' => 'upload_excel') , array( 'escape' => false )) ; ?>
+				</li> -->
 
 			</ul>
 			<!-- END SIDEBAR MENU -->

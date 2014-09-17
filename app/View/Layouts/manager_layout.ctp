@@ -187,7 +187,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 				</li>
 				<li class="">
 					<a href="javascript:;">
-					<i class=""></i> 
+					<i class=" "></i> 
 					<span class="title">Team Leader</span>
 					<span class="arrow "></span>
 					</a>
@@ -202,16 +202,16 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 				</li>
 				<li class="">
 					<a href="javascript:;">
-					<i class=""></i> 
-					<span class="title">Tally Caller</span>
+					<i class=" "></i> 
+					<span class="title">Tele Caller</span>
 					<span class="arrow "></span>
 					</a>
 					<ul class="sub-menu">
 						<li >
-							<?php echo $this->Html->link('View ALL' , array('controller' => 'tallycallers' , 'action' => 'index')) ; ?>
+							<?php echo $this->Html->link('View ALL' , array('controller' => 'telecallers' , 'action' => 'index')) ; ?>
 						</li>
 						<li >
-							<?php echo $this->Html->link('Add New' , array('controller' => 'tallycallers' , 'action' => 'add')) ; ?>
+							<?php echo $this->Html->link('Add New' , array('controller' => 'telecallers' , 'action' => 'add')) ; ?>
 						</li>
 					</ul>
 				</li>

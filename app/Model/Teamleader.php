@@ -28,8 +28,8 @@ class Teamleader extends AppModel{
 		)
     );
     Public $hasMany = array(
-        'Tallycaller' => array(
-            'className' => 'Tallycaller',
+        'Telecaller' => array(
+            'className' => 'Telecaller',
             'foreign_key' => 'teamleader_id',
             'conditions' => '',
             'fields' => '',

@@ -52,11 +52,11 @@ class User extends AppModel {
             'finderQuery' => '',
             'counterQuery' => ''
         ),
-        'Tallycaller' => array(
-            'className' => 'Tallycaller',
+        'Telecaller' => array(
+            'className' => 'Telecaller',
             'foreignKey' => 'id',
             'dependent' => true,
-            'conditions' => 'User.role="Tallycaller"',
+            'conditions' => 'User.role="Telecaller"',
             'fields' => '',
             'order' => '',
             'limit' => '',
@@ -126,7 +126,7 @@ class User extends AppModel {
         //              
         'role' => array(
             'valid' => array(
-                'rule' => array('inList', array('SuperAdmin', 'Manager', 'TeamLeader', 'TallyCaller')),
+                'rule' => array('inList', array('SuperAdmin', 'Manager', 'TeamLeader', 'TeleCaller')),
                 'message' => 'Please enter a valid role',
                 'allowEmpty' => false
             )
@@ -277,9 +277,9 @@ class User extends AppModel {
                     $teamleader['Teamleader']['id'] = $user_id;
                     $this->Teamleader->save($teamleader);
                     break;
-                case 'TallyCaller':
-                    $tallycaller['Tallycaller']['id'] = $user_id;
-                    $this->Tallycaller->save($tallycaller);
+                case 'TeleCaller':
+                    $telecaller['Telecaller']['id'] = $user_id;
+                    $this->Telecaller->save($telecaller);
                     break;
             }
         }

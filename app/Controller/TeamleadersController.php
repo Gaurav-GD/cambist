@@ -14,7 +14,7 @@
 	        "Superadmin",
 	        "Manager",
 	        "Teamleader",
-	        "TallyCaller"
+	        "Telecaller"
 	    );
 	    
 	    public $paginate = array(
@@ -143,7 +143,7 @@
 	        $this->redirect(array('action' => 'index'));
 	    }
 
-	    public function upload_excel (){
+	    public function upload_master_allocation(){
 	    	if($this->request->is('post')){
 	    		$excel_data["file_name"] = $this->request->data['Teamleader']['xlsx_file']['name'];
                 $excel_data["file_path"] = $this->request->data['Teamleader']['xlsx_file']['tmp_name'];
@@ -222,38 +222,37 @@
 
 				$excel = new ExcelProcessor($excel_data);
 				$excel_error = true;
-				// $this->preprint($excel);
-
-				// if($excel->is_file_format_correct()){
-				// 	if($excel->all_sheets_present()){
-				// 		if($excel->all_sheets_columns_present()){
-				// 			$excel->add_data();
-				// 			$excel_error = false;
-				// 		}						
-				// 	}
-				// }
 
 				if($excel->is_file_format_correct()){
 					$excel->add_data();
-					
-					// exit;
 					$excel_error = false;
 				}
 
 	            if($excel_error){
-	              // $this->pre_print($excel->get_sheet_errors());
 	            	$this->Session->setFlash('Something went while uploading ! Please try again !!','', array() , 'error');
 	            }
 	            else{
 	                $this->Session->setFlash('Excel file data uploaded successfully.' , '' , array() , 'success');
-	                $this->redirect(array('action' => 'upload_excel'));
+	                $this->redirect(array('action' => 'upload_master_allocation'));
 	            }
 	          
 
 	    	}else{
-	    		$this->set(array('upload_excel' => 'Upload Excel'));
+	    		$this->set(array('upload_master_allocation' => 'Upload Master Allocation Excel'));
 	    	}
 	    }
+
+	    public function upload_open_invoice(){
+	    	$this->set(array('upload_open_invoice' => 'Upload Open Invoice Excel'));
+	    }
+
+		public function upload_ao(){
+			$this->set(array('upload_ao' => 'Upload A&O Excel'));
+	    }
+
+	    public function upload_bd(){
+	    	$this->set(array('upload_bd' => 'Upload BD Excel'));
+	    }	    
 	}
 ?>
 
