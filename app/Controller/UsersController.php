@@ -40,16 +40,16 @@ class UsersController extends AppController {
                 $user = $this->Auth->user();
                 if(!empty($user)){
                     if($user['role'] == 'SuperAdmin'){
-                        $this->Session->setFlash('Welcome, ' . $user['username'],'',array(),'success');
+                        $this->Session->setFlash('Welcome, ' . ucfirst($user['username']),'',array(),'success');
                         $this->redirect(array('controller' => 'Superadmins','action' => 'index'));
                     }elseif($user['role'] == 'Manager'){
-                        $this->Session->setFlash('Welcome, ' . $user['username'],'',array(),'success');
+                        $this->Session->setFlash('Welcome, ' . ucfirst($user['username']),'',array(),'success');
                         $this->redirect(array('controller' => 'Managers','action' => 'index'));
                     }elseif($user['role'] == 'TeamLeader'){
-                        $this->Session->setFlash('Welcome, ' . $user['username'],'',array(),'success');
+                        $this->Session->setFlash('Welcome, ' . ucfirst($user['username']),'',array(),'success');
                         $this->redirect(array('controller' => 'Teamleaders','action' => 'index'));
                     }else{
-                        $this->Session->setFlash('Welcome, ' . $user['username'],'',array(),'success');
+                        $this->Session->setFlash('Welcome, ' .  ucfirst($user['username']),'',array(),'success');
                         $this->redirect(array('controller' => 'Tallycallers','action' => 'index'));
                     }
                 }else{

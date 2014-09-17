@@ -1,6 +1,7 @@
  <!--BEGIN PAGE CONTAINER-->
 <div class="container-fluid">
 	<!-- BEGIN PAGE HEADER-->
+	
 	<div class="row-fluid">
 		<div class="span12">
 			<!-- BEGIN STYLE CUSTOMIZER -->
@@ -54,20 +55,34 @@
 			</h3>
 			<ul class="breadcrumb">
 				<li>
-					<i class="icon-home"></i>
-					<a href="index.html">Home</a> 
+					<?php
+						echo $this->Html->link('<i class="icon-home"></i>  Home',array('action'     => 'index'),array('escape' => false));
+					?>
+					<!-- <i class="icon-home"></i>
+					<a href="index.html">Home</a>  -->
 					<i class="icon-angle-right"></i>
 				</li>
 				<li>
-					<a href="#">Form Stuff</a>
-					<i class="icon-angle-right"></i>
+					<a href="#">Upload Excel</a>
+					<!-- <i class="icon-angle-right"></i> -->
 				</li>
-				<li><a href="#">Dropzone File Upload</a></li>
+				<!-- <li><a href="#">Dropzone File Upload</a></li> -->
 			</ul>
 			<!-- END PAGE TITLE & BREADCRUMB-->
 		</div>
 	</div>
 	<!-- END PAGE HEADER-->
+	<div class="row-fluid">
+	    <div class="span8 offset2">
+	        <?php if($message = $this->Session->flash('error')):?>
+	            <div class="alert alert-error"><?php echo $message; ?></div>
+	        <?php elseif($message = $this->Session->flash('success')):?>
+	            <div class="alert alert-success"><?php echo $message; ?></div>
+	        <?php else: ?>
+	            <div>&nbsp;</div>
+	        <?php endif; ?>
+	    </div>
+	</div>
 	<!-- BEGIN PAGE CONTENT-->
 	<div class="row-fluid">
 		<!-- <div class="span12">

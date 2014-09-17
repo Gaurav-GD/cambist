@@ -64,6 +64,17 @@
     </div>
 </div>
 <!-- END PAGE HEADER-->
+<div class="row-fluid">
+    <div class="span8 offset2">
+        <?php if($message = $this->Session->flash('error')):?>
+            <div class="alert alert-error"><?php echo $message; ?></div>
+        <?php elseif($message = $this->Session->flash('success')):?>
+            <div class="alert alert-success"><?php echo $message; ?></div>
+        <?php else: ?>
+            <div>&nbsp;</div>
+        <?php endif; ?>
+    </div>
+</div>
 <!-- BEGIN PAGE CONTENT-->
 <div class="row-fluid">
     <div class="span12">

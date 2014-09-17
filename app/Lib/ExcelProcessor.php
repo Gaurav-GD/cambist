@@ -95,6 +95,15 @@
 				for($col = 0 ; $col < $highestColumnIndex ; $col++){
 					if($row == 1){
 						$value = $sheet->getCellByColumnAndRow($col,$row)->getValue();
+						if(preg_match('@\s@', $value)){
+							$value = preg_replace('@\s@','_',$value);
+						}
+						if(preg_match('@/@',$value)){
+							$value = preg_replace('@/@','_',$value);
+						}
+						if(preg_match('@\+@',$value)){
+							$value = preg_replace('@\+@','plus', $value);
+						}
 						$keys[$col] = $value;
 					}else{
 						$value = $sheet->getCellByColumnAndRow($col,$row)->getValue();
@@ -102,11 +111,17 @@
 					}
 				}
 				if($row > 1){
-					$this->allocationmasters->save($data);
-					// echo"<pre>";print_r($data);
+					// echo"<pre>";print_r($data);exit;
+					try{
+						$this->allocationmasters->create();
+						$this->allocationmasters->save($data);
+						unset($data);
+					}catch(Exception $e){
+						die('Error saving data '.$e->getMessage());
+					}
 				}
 			}
-			exit;
+			// exit;
 			// $test = ClassRegistry::init('Allocationmasters');
 			// $test_ar = $this->users->find('all');
 			// echo"<pre>";print_r($keys);
