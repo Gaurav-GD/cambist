@@ -45,7 +45,7 @@
                     <a href="javascript:;" class="remove"></a>
                 </div>
             </div>
-			<div>
+			<!-- <div>
 				<form>
 				<?php echo "Task Id : ". $task_id;?>
 					<div class="controls controls-row">
@@ -103,8 +103,10 @@
 						<input class="span1 m-wrap" type="text" placeholder=".span1" />
 					</div>
 				</form>
-			</div>
+			</div> -->
         </div>
+			<div style="font-size:50px; text-align:center;" ><?php echo "Page is Under Maintenance" ;?></div>
+        
         <!-- END EXAMPLE TABLE PORTLET-->
     </div>
 </div>
