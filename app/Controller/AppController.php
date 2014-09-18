@@ -57,7 +57,7 @@ class AppController extends Controller {
         case 'TeamLeader':
             $this->layout = 'teamleader_layout';
             break;
-        case 'Telecaller':
+        case 'TeleCaller':
             $this->layout = 'telecaller_layout';
             break;
        }

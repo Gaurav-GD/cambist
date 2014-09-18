@@ -14,7 +14,8 @@
 	        "Superadmin",
 	        "Manager",
 	        "Teamleader",
-	        "Telecaller"
+	        "Telecaller",
+	        "Allocationmaster"
 	    );
 	    
 	    public $paginate = array(
@@ -229,7 +230,7 @@
 				}
 
 	            if($excel_error){
-	            	$this->Session->setFlash('Something went while uploading ! Please try again !!','', array() , 'error');
+	              $this->preprint($excel->get_sheet_errors());
 	            }
 	            else{
 	                $this->Session->setFlash('Excel file data uploaded successfully.' , '' , array() , 'success');

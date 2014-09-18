@@ -1,11 +1,4 @@
 <!DOCTYPE html>
-<!-- 
-Template Name: Metronic - Responsive Admin Dashboard Template build with Twitter Bootstrap 2.3.1
-Version: 1.3
-Author: KeenThemes
-Website: http://www.keenthemes.com/preview/?theme=metronic
-Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469
--->
 <!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
 <!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
 <!--[if !IE]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
@@ -27,18 +20,6 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 		echo $this->Html->css('../assets/css/themes/default');
 		echo $this->Html->css('../assets/plugins/uniform/css/uniform.default');
 		echo $this->Html->css('../assets/plugins/dropzone/css/dropzone');
-	?>
-	<!-- <link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
-	<link href="assets/plugins/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css"/>
-	<link href="assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
-	<link href="assets/css/style-metro.css" rel="stylesheet" type="text/css"/>
-	<link href="assets/css/style.css" rel="stylesheet" type="text/css"/>
-	<link href="assets/css/style-responsive.css" rel="stylesheet" type="text/css"/>
-	<link href="assets/css/themes/default.css" rel="stylesheet" type="text/css" id="style_color"/>
-	<link href="assets/plugins/uniform/css/uniform.default.css" rel="stylesheet" type="text/css"/> -->
-	<!-- END GLOBAL MANDATORY STYLES -->
-	<!-- BEGIN PAGE LEVEL STYLES --> 
-	<?php
 		echo $this->Html->css('../assets/plugins/gritter/css/jquery.gritter');
 		echo $this->Html->css('../assets/plugins/bootstrap-daterangepicker/daterangepicker');
 		echo $this->Html->css('../assets/plugins/fullcalendar/fullcalendar/fullcalendar');
@@ -46,11 +27,6 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 		echo $this->Html->css('../assets/plugins/jquery-easy-pie-chart/jquery.easy-pie-chart');
 		
 	?>
-	<!-- <link href="assets/plugins/gritter/css/jquery.gritter.css" rel="stylesheet" type="text/css"/>
-	<link href="assets/plugins/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet" type="text/css" />
-	<link href="assets/plugins/fullcalendar/fullcalendar/fullcalendar.css" rel="stylesheet" type="text/css"/>
-	<link href="assets/plugins/jqvmap/jqvmap/jqvmap.css" rel="stylesheet" type="text/css" media="screen"/>
-	<link href="assets/plugins/jquery-easy-pie-chart/jquery.easy-pie-chart.css" rel="stylesheet" type="text/css" media="screen"/> -->
 	<!-- END PAGE LEVEL STYLES -->
 	<link rel="shortcut icon" href="favicon.ico" />
 </head>
@@ -75,103 +51,16 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 				<!-- END RESPONSIVE MENU TOGGLER -->            
 				<!-- BEGIN TOP NAVIGATION MENU -->              
 				<ul class="nav pull-right">
-					<!-- BEGIN NOTIFICATION DROPDOWN -->   
-					<li class="dropdown" id="header_notification_bar">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-						<i class="icon-warning-sign"></i>
-						<span class="badge">6</span>
-						</a>
-						<ul class="dropdown-menu extended notification">
-							<li>
-								<p>You have 14 new notifications</p>
-							</li>
-							<li>
-								<a href="#">
-								<span class="label label-success"><i class="icon-plus"></i></span>
-								New user registered. 
-								<span class="time">Just now</span>
-								</a>
-							</li>
-							<li class="external">
-								<a href="#">See all notifications <i class="m-icon-swapright"></i></a>
-							</li>
-						</ul>
-					</li>
-					<!-- END NOTIFICATION DROPDOWN -->
-					<!-- BEGIN INBOX DROPDOWN -->
-					<li class="dropdown" id="header_inbox_bar">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-						<i class="icon-envelope"></i>
-						<span class="badge">5</span>
-						</a>
-						<ul class="dropdown-menu extended inbox">
-							<li>
-								<p>You have 12 new messages</p>
-							</li>
-							<li>
-								<a href="inbox.html?a=view">
-								<span class="photo"><img src="./assets/img/avatar2.jpg" alt="" /></span>
-								<span class="subject">
-								<span class="from">Lisa Wong</span>
-								<span class="time">Just Now</span>
-								</span>
-								<span class="message">
-								Vivamus sed auctor nibh congue nibh. auctor nibh
-								auctor nibh...
-								</span>  
-								</a>
-							</li>
-							<li class="external">
-								<a href="inbox.html">See all messages <i class="m-icon-swapright"></i></a>
-							</li>
-						</ul>
-					</li>
-					<!-- END INBOX DROPDOWN -->
-					<!-- BEGIN TODO DROPDOWN -->
-					<li class="dropdown" id="header_task_bar">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-						<i class="icon-tasks"></i>
-						<span class="badge">5</span>
-						</a>
-						<ul class="dropdown-menu extended tasks">
-							<li>
-								<p>You have 12 pending tasks</p>
-							</li>
-							<li>
-								<a href="#">
-								<span class="task">
-								<span class="desc">New release v1.2</span>
-								<span class="percent">30%</span>
-								</span>
-								<span class="progress progress-success ">
-								<span style="width: 30%;" class="bar"></span>
-								</span>
-								</a>
-							</li>
-							
-							<li class="external">
-								<a href="#">See all tasks <i class="m-icon-swapright"></i></a>
-							</li>
-						</ul>
-					</li>
-					<!-- END TODO DROPDOWN -->
 					<!-- BEGIN USER LOGIN DROPDOWN -->
 					<li class="dropdown user">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-						<!-- <img alt="" src="assets/img/avatar1_small.jpg" /> -->
-						<?php //echo $this->Html->image('../assets/img/avatar1_small.jpg')?>
+						<?php echo $this->Html->image('../assets/img/avatar1_small.jpg')?>
 						<span class="username"><?php print_r(ucfirst($logged_in_user['username']));?></span>
 						<i class="icon-angle-down"></i>
 						</a>
 						<ul class="dropdown-menu">
-							<li><a href="extra_profile.html"><i class="icon-user"></i> My Profile</a></li>
-							<li><a href="page_calendar.html"><i class="icon-calendar"></i> My Calendar</a></li>
-							<li><a href="inbox.html"><i class="icon-envelope"></i> My Inbox(3)</a></li>
-							<li><a href="#"><i class="icon-tasks"></i> My Tasks</a></li>
-							<li class="divider"></li>
-							<li><a href="extra_lock.html"><i class="icon-lock"></i> Lock Screen</a></li>
-							<!-- <li><a href=""><i class="icon-key"></i> Log Out</a></li> -->
-							<li><?php echo $this->Html->link("<i class='icon-key'></i>Log Out",array('controller' => 'users' , 'action' => 'logout'),array('escape' => false)); ?></li>
+							<li><?php echo $this->Html->link("<i class='icon-key'></i>Log Out",array('controller' => 'users' , 'action' => 'logout'),array('escape' => false)); ?>
+							</li>
 						</ul>
 					</li>
 					<!-- END USER LOGIN DROPDOWN -->

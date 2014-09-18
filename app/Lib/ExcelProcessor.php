@@ -1,11 +1,6 @@
 <?php
 	App::import( 'Vendor' , 'Classes/PHPExcel.php' );
 
-	App::import( 'Model' , 'User' , array( 'file' => 'Model/User.php' ));
-	App::import( 'Model' , 'Superadmin' , array( 'file' => 'Model/Superadmin' ));
-	App::import( 'Model' , 'Manager' , array( 'file' => 'Model/Manager' ));
-	App::import( 'Model' , 'Allocationmasters' , array( 'file' => 'Model/Allocationmasters' ));
-
 	class ExcelProcessor{
 
 		protected $file_name;
@@ -19,10 +14,8 @@
 	    protected $user_data;
 	    protected $reader;
 	    protected $xls;
-
 	    protected $allocationmasters ;
 	    protected $users;
-	    // $test = ClassRegistry::init('User');
 
 	    public function __construct($args){
 	      $this->sheet_names = $args["sheet_names"];
@@ -31,8 +24,10 @@
 	      $this->sheet_columns = $args["sheet_columns"];
 	      $this->teamleader_id = $args["teamleader_id"];
 
-	      $this->users = ClassRegistry::init('User');
-	      $this->allocationmasters = ClassRegistry::init('Allocationmasters');
+	      $this->users = ClassRegistry::init('Users');
+	      $this->allocationmasters = ClassRegistry::init('Allocationmaster');
+	      $this->telecallers = ClassRegistry::init('Telecaller');
+	      $this->telecallers_allocationmasters = ClassRegistry::init('TelecallersAllocationmaster');
 	    }
 
 	    public function is_file_format_correct(){
@@ -91,6 +86,7 @@
 			$highestColumn = $sheet->getHighestDataColumn();
 			$highestColumnIndex = PHPExcel_Cell::columnIndexFromString($highestColumn);
 			$keys = array();
+			$telecaller_data = array();
 			for ($row = 1; $row <= $highestRow; $row++){ 
 				for($col = 0 ; $col < $highestColumnIndex ; $col++){
 					if($row == 1){
@@ -107,18 +103,43 @@
 						$keys[$col] = $value;
 					}else{
 						$value = $sheet->getCellByColumnAndRow($col,$row)->getValue();
-						$data['Allocationmasters'][$keys[$col]] = $value;	
+						$data['Allocationmaster'][$keys[$col]] = $value;	
 					}
 				}
 				if($row > 1){
-					// echo"<pre>";print_r($data);exit;
-					try{
-						$this->allocationmasters->create();
-						$this->allocationmasters->save($data);
-						unset($data);
-					}catch(Exception $e){
-						die('Error saving data '.$e->getMessage());
+					// $a = $this->allocationmasters->find('all');
+					// echo"here";echo"<pre>";print_r($a);exit;
+					$this->allocationmasters->create();
+					if($this->allocationmasters->save($data)){
+						$telecallers = $this->telecallers->find('all',
+							array(
+								'contain' => false,
+								'fields' => "DISTINCT(User.id),User.username",
+								'joins' => array(
+									array(
+										"table" => "users",
+										"alias" => "User",
+										"type" => "INNER",
+										"conditions" => "User.id = Telecaller.id"
+									)
+								)
+							)
+						);
+						foreach ($telecallers as $tc) {
+							if(strtolower($data['Allocationmaster']['TC']) == $tc['User']['username']){
+								$telecaller_data['TelecallersAllocationmaster']['telecaller_id'] = $tc['User']['id'];
+								$telecaller_data['TelecallersAllocationmaster']['allocationmaster_id'] = $this->allocationmasters->id;
+								$telecaller_data['TelecallersAllocationmaster']['created'] = date('Y-m-d H:i:s');
+								$telecaller_data['TelecallersAllocationmaster']['modified'] = date('Y-m-d H:i:s');
+								$this->telecallers_allocationmasters->create();
+								$this->telecallers_allocationmasters->save($telecaller_data);
+								unset($telecaller_data);
+							}						
+						}
+					}else{
+						$this->sheet_errors = "Invalid Data at row number : ".$row;
 					}
+					unset($data);
 				}
 			}
 			// exit;

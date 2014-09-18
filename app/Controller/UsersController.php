@@ -50,7 +50,7 @@ class UsersController extends AppController {
                         $this->redirect(array('controller' => 'Teamleaders','action' => 'index'));
                     }else{
                         $this->Session->setFlash('Welcome, ' .  ucfirst($user['username']),'',array(),'success');
-                        $this->redirect(array('controller' => 'Telecallers','action' => 'index'));
+                        $this->redirect(array('controller' => 'Telecallers','action' => 'task_list'));
                     }
                 }else{
                     $this->Session->setFlash('Login failed Please try again','',array(),'error');
