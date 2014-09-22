@@ -5,7 +5,7 @@
 <!-- BEGIN HEAD -->
 <head>
 	<meta charset="utf-8" />
-	<title>Metronic | Admin Dashboard Template</title>
+	<title>Cambist Admin Panel</title>
 	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
 	<meta content="" name="description" />
 	<meta content="" name="author" />
@@ -20,11 +20,7 @@
 		echo $this->Html->css('../assets/css/themes/default');
 		echo $this->Html->css('../assets/plugins/uniform/css/uniform.default');
 		echo $this->Html->css('../assets/plugins/dropzone/css/dropzone');
-		echo $this->Html->css('../assets/plugins/gritter/css/jquery.gritter');
 		echo $this->Html->css('../assets/plugins/bootstrap-daterangepicker/daterangepicker');
-		echo $this->Html->css('../assets/plugins/fullcalendar/fullcalendar/fullcalendar');
-		echo $this->Html->css('../assets/plugins/jqvmap/jqvmap/jqvmap');
-		echo $this->Html->css('../assets/plugins/jquery-easy-pie-chart/jquery.easy-pie-chart');
 		
 	?>
 	<!-- END PAGE LEVEL STYLES -->
@@ -167,7 +163,7 @@
 	<!-- BEGIN FOOTER -->
 	<div class="footer">
 		<div class="footer-inner">
-			2013 &copy; Metronic by keenthemes.
+			2014 &copy; Cambist.
 		</div>
 		<div class="footer-tools">
 			<span class="go-top">
@@ -213,13 +209,8 @@
 		jQuery(document).ready(function() {    
 		   App.init(); // initlayout and core plugins
 		   Index.init();
-		   Index.initJQVMAP(); // init index page's custom scripts
-		   Index.initCalendar(); // init index page's custom scripts
-		   Index.initCharts(); // init index page's custom scripts
-		   Index.initChat();
-		   Index.initMiniCharts();
-		   Index.initDashboardDaterange();
-		   Index.initIntro();
+		   // Index.initDashboardDaterange();
+		   // Index.initIntro();
 		});
 	</script>
 	<!-- END JAVASCRIPTS -->

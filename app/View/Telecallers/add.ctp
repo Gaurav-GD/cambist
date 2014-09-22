@@ -39,8 +39,8 @@
                         <div class="portlet-body form">
                             <!-- BEGIN FORM-->
                             <?php 
-                                
-                                echo $this->Form->create('User',array('class' => 'form-horizontal form-bordered form-row-stripped')); ?>
+                                echo $this->Form->create('User',array('class' => 'form-horizontal form-bordered form-row-stripped')); 
+                            ?>
                                 <div class="control-group">
                                     <label class="control-label">Username</label>
                                     <div class="controls">

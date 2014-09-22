@@ -11,7 +11,8 @@
 	        "Superadmin",
 	        "Teamleader",
 	        "Manager",
-	        "TelecallersAllocationmaster"
+	        "TelecallersAllocationmaster",
+	        "Allocationmasterfeedback"
 	    );
 	    
 	    public $paginate = array(
@@ -167,9 +168,14 @@
 	    }
 
 	    public function task_feedback($task_id){
+	    	// $test = $this->Allocationmasterfeedback->find('all');
+	    	// $this->preprint($test);
+
 	    	$this->set(compact('task_id'));
 
 	    }
+
+
 
 	    
 	}

@@ -53,13 +53,13 @@
                         <?php echo $this->Html->link("Add New Manager    <i class='icon-plus'></i>",array('action' => 'add'),array( 'id' => 'sample_editable_1_new','class' => 'btn green','escape' => false));?>
                     </div>
                     <div class="btn-group pull-right">
-                        <button class="btn dropdown-toggle" data-toggle="dropdown">Tools <i class="icon-angle-down"></i>
+                       <!--  <button class="btn dropdown-toggle" data-toggle="dropdown">Tools <i class="icon-angle-down"></i>
                         </button>
                         <ul class="dropdown-menu pull-right">
                             <li><a href="#">Print</a></li>
                             <li><a href="#">Save as PDF</a></li>
                             <li><a href="#">Export to Excel</a></li>
-                        </ul>
+                        </ul> -->
                     </div>
                 </div>
                 <table class="table table-striped table-hover table-bordered" id="sample_editable_1">

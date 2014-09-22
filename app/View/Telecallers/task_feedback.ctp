@@ -45,67 +45,329 @@
                     <a href="javascript:;" class="remove"></a>
                 </div>
             </div>
-			<!-- <div>
-				<form>
-				<?php echo "Task Id : ". $task_id;?>
-					<div class="controls controls-row">
-						<input class="span12 m-wrap" type="text" placeholder=".span12" />
-					</div>
-					<div class="controls controls-row">
-						<input class="span11 m-wrap" type="text" placeholder=".span11" />
-						<input class="span1 m-wrap" type="text" placeholder=".span1" />
-					</div>
-					<div class="controls controls-row">
-						<input class="span10 m-wrap" type="text" placeholder=".span10" />
-						<input class="span2 m-wrap" type="text" placeholder=".span2" />
-					</div>
-					<div class="controls controls-row">
-						<input class="span9 m-wrap" type="text" placeholder=".span9" />
-						<input class="span3 m-wrap" type="text" placeholder=".span3" />
-					</div>
-					<div class="controls controls-row">
-						<input class="span8 m-wrap" type="text" placeholder=".span8" />
-						<input class="span4 m-wrap" type="text" placeholder=".span4" />
-					</div>
-					<div class="controls controls-row">
-						<input class="span7 m-wrap" type="text" placeholder=".span7" />
-						<input class="span5 m-wrap" type="text" placeholder=".span5" />
-					</div>
-					<div class="controls controls-row">
-						<input class="span6 m-wrap" type="text" placeholder=".span6" />
-						<input class="span6 m-wrap" type="text" placeholder=".span6" />
-					</div>
-					<div class="controls controls-row">
-						<input class="span5 m-wrap" type="text" placeholder=".span5" />
-						<input class="span7 m-wrap" type="text" placeholder=".span7" />
-					</div>
-					<div class="controls controls-row">
-						<input class="span4 m-wrap" type="text" placeholder=".span4" />
-						<input class="span8 m-wrap" type="text" placeholder=".span8" />
-					</div>
-					<div class="controls controls-row">
-						<input class="span3 m-wrap" type="text" placeholder=".span3" />
-						<input class="span9 m-wrap" type="text" placeholder=".span9" />
-					</div>
-					<div class="controls controls-row">
-						<input class="span2 m-wrap" type="text" placeholder=".span2" />
-						<input class="span10 m-wrap" type="text" placeholder=".span10" />
-					</div>
-					<div class="controls controls-row">
-						<input class="span1 m-wrap" type="text" placeholder=".span1" />
-						<input class="span11 m-wrap" type="text" placeholder=".span11" />
-					</div>
-					<div class="controls controls-row">
-						<input class="span2 m-wrap" type="text" placeholder=".span2" />
-						<input class="span3 m-wrap" type="text" placeholder=".span3" />
-						<input class="span4 m-wrap" type="text" placeholder=".span4" />
-						<input class="span2 m-wrap" type="text" placeholder=".span2" />
-						<input class="span1 m-wrap" type="text" placeholder=".span1" />
-					</div>
-				</form>
-			</div> -->
+            
+			
         </div>
-			<div style="font-size:50px; text-align:center;" ><?php echo "Page is Under Maintenance" ;?></div>
+        <div class="tab-content">
+				<?php 
+	                echo $this->Form->create('',array('class' => 'form-horizontal form-bordered form-row-stripped')); 
+	                //echo "Task Id : ". $task_id;
+	            ?>
+	            	<!-- <div class="control-group">
+	            		<div class="controls controls-row span12">
+		            		<center><H1<b> Customer Details</b></H1></center>
+	            		</div>
+	            	</div> -->
+	            	<div class="control-group">
+	            		<div class="controls controls-row span4"> 
+	            			<label class="control-label span3">Company Name</label>
+	            			<?php 
+	            				echo $this->Form->input('Company_Name',array('placeholder' => 'Company Name' , 'class' => 'm-wrap span9','label' => false));
+	            			?>
+	            		</div>
+	            		<div class="controls controls-row span4">
+	            			<label class="control-label span3">Bill Name</label>
+	            			<?php
+	            				echo $this->Form->input('Bill_Name' , array('placeholder' => 'Bill Name' , 'class' => 'm-wrap span9' ,'label' => false));
+	            			?>
+	            		</div>
+	            		<div class="controls controls-row span4">
+	            			<label class="control-label span2">Acct Ext Id</label>
+	            			<?php
+	            				echo $this->Form->input('Acct_Ext_Id' , array('placeholder' => 'Acct Ext Id' , 'class'=>'m-wrap span9' , 'label' => false));
+	            			?>
+	            		</div>
+	            	</div>
+	            	<div class="control-group">
+	            		<div class="controls control-row span4">
+	            			<label class="control-label span3">Name</label>
+	            			<?php
+	            				echo $this->Form->input('Name1' , array('placeholder' => 'Name' , 'class' => 'm-wrap span9' , 'label' => false));
+	            			?>
+	            		</div>
+	            		<div class="controls control-row span4">
+	            			<label class="control-label span3">Number</label>
+	            			<?php
+	            				echo $this->Form->input('Number1' , array('placeholder' => 'Number' , 'class' => 'm-wrap span9' , 'label' => false));
+	            			?>
+	            		</div>
+	            		<div class="controls control-row span4">
+	            			<label class="control-label span3">Email Id</label>
+	            			<?php
+	            				echo $this->Form->input('Email1' , array('placeholder' => 'Email Id' , 'class' => 'm-wrap span9' , 'label' => false));
+	            			?>
+	            		</div>
+	            	</div>
+	            	<div class="control-group">
+	            		<div class="controls control-row span4">
+	            			<label class="control-label span3">Name</label>
+	            			<?php
+	            				echo $this->Form->input('Name2' , array('placeholder' => 'Name' , 'class' => 'm-wrap span9' , 'label' => false));
+	            			?>
+	            		</div>
+	            		<div class="controls control-row span4">
+	            			<label class="control-label span3">Number</label>
+	            			<?php
+	            				echo $this->Form->input('Number2' , array('placeholder' => 'Number' , 'class' => 'm-wrap span9' , 'label' => false));
+	            			?>
+	            		</div>
+	            		<div class="controls control-row span4">
+	            			<label class="control-label span3">Email Id</label>
+	            			<?php
+	            				echo $this->Form->input('Email2' , array('placeholder' => 'Email Id' , 'class' => 'm-wrap span9' , 'label' => false));
+	            			?>
+	            		</div>
+	            	</div>
+	            	<div class="control-group">
+	            		<div class="controls  span4">
+	            			<label class="control-label span3">Name</label>
+	            			<?php
+	            				echo $this->Form->input('Name3' , array('placeholder' => 'Name' , 'class' => 'm-wrap span9' , 'label' => false));
+	            			?>
+	            		</div>
+	            		<div class="controls control-row span4">
+	            			<label class="control-label span3">Number</label>
+	            			<?php
+	            				echo $this->Form->input('Number3' , array('placeholder' => 'Number' , 'class' => 'm-wrap span9' , 'label' => false));
+	            			?>
+	            		</div>
+	            		<div class="controls control-row span4">
+	            			<label class="control-label span3">Email Id</label>
+	            			<?php
+	            				echo $this->Form->input('Email3' , array('placeholder' => 'Email Id' , 'class' => 'm-wrap span9' , 'label' => false));
+	            			?>
+	            		</div>
+	            	</div>
+	            	<div class="control-group">
+	            		<div class="controls control-row span12">
+	            			<label class="control control-row span1">Address</label>
+	            			<?php
+	            				echo $this->Form->input('Address' , array('placeholder' => 'Address' , 'class' => 'm-wrap span11' , 'label' => false));
+	            			?>
+	            		</div>
+	            	</div>
+	            	<div class="control-group">
+	            		<div class="controls  span4">
+	            			<label class="control-label span3">Mobile Num</label>
+	            			<?php
+	            				echo $this->Form->input('Mobile_Num' , array('placeholder' => 'Mobile Num' , 'class' => 'm-wrap span9' , 'label' => false));
+	            			?>
+	            		</div>
+	            		<div class="controls control-row span4">
+	            			<label class="control-label span3">Alternate Number</label>
+	            			<?php
+	            				echo $this->Form->input('Alternate_Number' , array('placeholder' => 'Alternate Number' , 'class' => 'm-wrap span9' , 'label' => false));
+	            			?>
+	            		</div>
+	            		<div class="controls control-row span4">
+	            			<label class="control-label span3">Alternate Number</label>
+	            			<?php
+	            				echo $this->Form->input('Alternate_Number' , array('placeholder' => 'Alternate Number' , 'class' => 'm-wrap span9' , 'label' => false));
+	            			?>
+	            		</div>
+	            	</div>
+	            	<div class="control-group">
+	            		<div class="controls  span3">
+	            			<label class="control-label span5">Days_0_30</label>
+	            			<?php
+	            				echo $this->Form->input('Days_0_30' , array('placeholder' => 'Days_0_30' , 'class' => 'm-wrap span6' , 'label' => false));
+	            			?>
+	            		</div>
+	            		<div class="controls control-row span3">
+	            			<label class="control-label span5">Days_30_60</label>
+	            			<?php
+	            				echo $this->Form->input('Days_30_60' , array('placeholder' => 'Days_30_60' , 'class' => 'm-wrap span6' , 'label' => false));
+	            			?>
+	            		</div>
+	            		<div class="controls control-row span3">
+	            			<label class="control-label span5">Days_60_90</label>
+	            			<?php
+	            				echo $this->Form->input('Days_30_60' , array('placeholder' => 'Days_30_60' , 'class' => 'm-wrap span6' , 'label' => false));
+	            			?>
+	            		</div>
+	            		<div class="controls control-row span3">
+	            			<label class="control-label span5">Days_90_120</label>
+	            			<?php
+	            				echo $this->Form->input('Days_90_120' , array('placeholder' => 'Days_90_120' , 'class' => 'm-wrap span6' , 'label' => false));
+	            			?>
+	            		</div>
+	            	</div>
+	            	<div class="control-group">
+	            		<div class="controls  span4">
+	            			<label class="control-label span5">Days_120_150</label>
+	            			<?php
+	            				echo $this->Form->input('Days_120_150' , array('placeholder' => 'Days_120_150' , 'class' => 'm-wrap span7' , 'label' => false));
+	            			?>
+	            		</div>
+	            		<div class="controls control-row span4">
+	            			<label class="control-label span5">Days_150_180</label>
+	            			<?php
+	            				echo $this->Form->input('Days_150_180' , array('placeholder' => 'Days_150_180' , 'class' => 'm-wrap span7' , 'label' => false));
+	            			?>
+	            		</div>
+	            		<div class="controls control-row span4">
+	            			<label class="control-label span5">Days_180_Above</label>
+	            			<?php
+	            				echo $this->Form->input('Days_180_Above' , array('placeholder' => 'Days_180_Above' , 'class' => 'm-wrap span7' , 'label' => false));
+	            			?>
+	            		</div>
+	            	</div>
+	            	<div class="control-group">
+	            		<div class="controls  span3">
+	            			<label class="control-label span5">Balance</label>
+	            			<?php
+	            				echo $this->Form->input('Balance' , array('placeholder' => 'Balance' , 'class' => 'm-wrap span7' , 'label' => false));
+	            			?>
+	            		</div>
+	            		<div class="controls control-row span3">
+	            			<label class="control-label span5">PAID</label>
+	            			<?php
+	            				echo $this->Form->input('PAID' , array('placeholder' => 'PAID' , 'class' => 'm-wrap span7' , 'label' => false));
+	            			?>
+	            		</div>
+	            		<div class="controls control-row span3">
+	            			<label class="control-label span5">Total Due</label>
+	            			<?php
+	            				echo $this->Form->input('Total_Due' , array('placeholder' => 'Total Due' , 'class' => 'm-wrap span7' , 'label' => false));
+	            			?>
+	            		</div>
+	            		<div class="controls control-row span3">
+	            			<label class="control-label span5">Cat</label>
+	            			<?php
+	            				echo $this->Form->input('Cat' , array('placeholder' => 'Cat' , 'class' => 'm-wrap span7' , 'label' => false));
+	            			?>
+	            		</div>
+	            	</div>
+	            	<div class="control-group">
+	            		<div class="controls  span4">
+	            			<label class="control-label span5">RM</label>
+	            			<?php
+	            				echo $this->Form->input('RM' , array('placeholder' => 'RM' , 'class' => 'm-wrap span7' , 'label' => false));
+	            			?>
+	            		</div>
+	            		<div class="controls control-row span4">
+	            			<label class="control-label span5">CSA</label>
+	            			<?php
+	            				echo $this->Form->input('CSA' , array('placeholder' => 'CSA' , 'class' => 'm-wrap span7' , 'label' => false));
+	            			?>
+	            		</div>
+	            		<div class="controls control-row span4">
+	            			<label class="control-label span5">KAM</label>
+	            			<?php
+	            				echo $this->Form->input('KAM' , array('placeholder' => 'KAM' , 'class' => 'm-wrap span7' , 'label' => false));
+	            			?>
+	            		</div>
+	            	</div>
+	            	<div class="control-group">
+	            		<div class="controls  span4">
+	            			<label class="control-label span5">Bill Period</label>
+	            			<?php
+	            				echo $this->Form->input('Bill_Period' , array('placeholder' => 'Bill Period' , 'class' => 'm-wrap span7' , 'label' => false));
+	            			?>
+	            		</div>
+	            		<div class="controls control-row span4">
+	            			<label class="control-label span5">Value Type</label>
+	            			<?php
+	            				echo $this->Form->input('Value_Type' , array('placeholder' => 'Value Type' , 'class' => 'm-wrap span7' , 'label' => false));
+	            			?>
+	            		</div>
+	            		<div class="controls control-row span4">
+	            			<label class="control-label span5">VIP Flag</label>
+	            			<?php
+	            				echo $this->Form->input('VIP_Flag' , array('placeholder' => 'VIP Flag' , 'class' => 'm-wrap span7' , 'label' => false));
+	            			?>
+	            		</div>
+	            	</div>
+	            	<div class="control-group">
+	            		<div class="controls  span3">
+	            			<label class="control-label span5">Account Status</label>
+	            			<?php
+	            				echo $this->Form->input('Account_Status' , array('placeholder' => 'Account Status' , 'class' => 'm-wrap span7' , 'label' => false));
+	            			?>
+	            		</div>
+	            		<div class="controls control-row span3">
+	            			<label class="control-label span5">Product Type</label>
+	            			<?php
+	            				echo $this->Form->input('Product_Type' , array('placeholder' => 'Product Type' , 'class' => 'm-wrap span7' , 'label' => false));
+	            			?>
+	            		</div>
+	            		<div class="controls control-row span3">
+	            			<label class="control-label span5">Voice Status</label>
+	            			<?php
+	            				echo $this->Form->input('Voice_Status' , array('placeholder' => 'Voice Status' , 'class' => 'm-wrap span7' , 'label' => false));
+	            			?>
+	            		</div>
+	            		<div class="controls control-row span3">
+	            			<label class="control-label span5">Service Line</label>
+	            			<?php
+	            				echo $this->Form->input('Service_Line' , array('placeholder' => 'Service Line' , 'class' => 'm-wrap span7' , 'label' => false));
+	            			?>
+	            		</div>
+	            	</div>
+	            	<div class="control-group">
+	            		<div class="controls  span3">
+	            			<label class="control-label span5">Dsl Status</label>
+	            			<?php
+	            				echo $this->Form->input('Dsl_Status' , array('placeholder' => 'Dsl Status' , 'class' => 'm-wrap span7' , 'label' => false));
+	            			?>
+	            		</div>
+	            		<div class="controls control-row span3">
+	            			<label class="control-label span5">Dsl Status</label>
+	            			<?php
+	            				echo $this->Form->input('Dsl_Status' , array('placeholder' => 'Dsl Status' , 'class' => 'm-wrap span7' , 'label' => false));
+	            			?>
+	            		</div>
+	            		<div class="controls control-row span3">
+	            			<label class="control-label span5">RatePlan</label>
+	            			<?php
+	            				echo $this->Form->input('RatePlan' , array('placeholder' => 'RatePlan' , 'class' => 'm-wrap span7' , 'label' => false));
+	            			?>
+	            		</div>
+	            		<div class="controls control-row span3">
+	            			<label class="control-label span5">Aon</label>
+	            			<?php
+	            				echo $this->Form->input('Aon' , array('placeholder' => 'Aon' , 'class' => 'm-wrap span7' , 'label' => false));
+	            			?>
+	            		</div>
+	            	</div>
+	            	<div class="control-group">
+	            		<div class="controls  span3">
+	            			<label class="control-label span5">Back Office Status</label>
+	            			<?php
+	            				echo $this->Form->input('Back_Office_Status' , array('placeholder' => 'Back Office Status' , 'class' => 'm-wrap span6' , 'label' => false));
+	            			?>
+	            		</div>
+	            		<div class="controls control-row span3">
+	            			<label class="control-label span5">RM status</label>
+	            			<?php
+	            				echo $this->Form->input('RM_status' , array('placeholder' => 'RM status' , 'class' => 'm-wrap span6' , 'label' => false));
+	            			?>
+	            		</div>
+	            		<div class="controls control-row span3">
+	            			<label class="control-label span5">Payment File</label>
+	            			<?php
+	            				echo $this->Form->input('Payment_File' , array('placeholder' => 'Payment File' , 'class' => 'm-wrap span6' , 'label' => false));
+	            			?>
+	            		</div>
+	            		<div class="controls control-row span3">
+	            			<label class="control-label span5">Age Bkt</label>
+	            			<?php
+	            				echo $this->Form->input('Age_Bkt' , array('placeholder' => 'Age Bkt' , 'class' => 'm-wrap span6' , 'label' => false));
+	            			?>
+	            		</div>
+	            	</div>
+	            	<div class="control-group">
+	            		<div class="controls control-row span12">
+	            			<label class="control control-row span1">Data Captured</label>
+	            			<?php
+	            				echo $this->Form->input('Data_Captured' , array('placeholder' => 'Data Captured' , 'class' => 'm-wrap span11' , 'label' => false));
+	            			?>
+	            		</div>
+	            	</div>
+					
+				</form>
+			</div>
+		<div style="font-size:50px; text-align:center;" ><?php echo "Page is Under Maintenance" ;?></div>
         
         <!-- END EXAMPLE TABLE PORTLET-->
     </div>

@@ -27,10 +27,19 @@
 			if ( $user['role'] === 'SuperAdmin'){
 				if( $this->action === 'index' || $this->action === 'add' || $this->action === 'edit' || $this->action === 'delete' ){
 					return true;
+				}else{
+					return false;
+				}
+			}elseif($user['role'] === 'Manager'){
+				if( $this->action === 'index' || $this->action === 'add' || $this->action === 'edit' || $this->action === 'delete' || $this->action === 'dashboard'){
+					return true;
+				}else{
+					return false;
 				}
 			}else{
 				return false;
 			}
+			
 		}
 
 	    public function index() {

@@ -5,7 +5,7 @@
 <!-- BEGIN HEAD -->
 <head>
 	<meta charset="utf-8" />
-	<title>Metronic | Admin Dashboard Template</title>
+	<title>Cambist Admin Panel</title>
 	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
 	<meta content="" name="description" />
 	<meta content="" name="author" />
@@ -19,11 +19,7 @@
 		echo $this->Html->css('../assets/css/style-responsive');
 		echo $this->Html->css('../assets/css/themes/default');
 		echo $this->Html->css('../assets/plugins/uniform/css/uniform.default');
-		echo $this->Html->css('../assets/plugins/gritter/css/jquery.gritter');
 		echo $this->Html->css('../assets/plugins/bootstrap-daterangepicker/daterangepicker');
-		echo $this->Html->css('../assets/plugins/fullcalendar/fullcalendar/fullcalendar');
-		echo $this->Html->css('../assets/plugins/jqvmap/jqvmap/jqvmap');
-		echo $this->Html->css('../assets/plugins/jquery-easy-pie-chart/jquery.easy-pie-chart');
 		
 	?>
 	<!-- END PAGE LEVEL STYLES -->
@@ -169,7 +165,7 @@
 	<!-- BEGIN FOOTER -->
 	<div class="footer">
 		<div class="footer-inner">
-			2013 &copy; Metronic by keenthemes.
+			2014 &copy; Cambist.
 		</div>
 		<div class="footer-tools">
 			<span class="go-top">
@@ -202,21 +198,11 @@
 	<!-- END CORE PLUGINS -->
 	<!-- BEGIN PAGE LEVEL PLUGINS -->
 	<?php
-		echo $this->Html->script('../assets/plugins/jqvmap/jqvmap/jquery.vmap');
-		echo $this->Html->script('../assets/plugins/jqvmap/jqvmap/maps/jquery.vmap.russia');
-		echo $this->Html->script('../assets/plugins/jqvmap/jqvmap/maps/jquery.vmap.world');
-		echo $this->Html->script('../assets/plugins/jqvmap/jqvmap/maps/jquery.vmap.europe');
-		echo $this->Html->script('../assets/plugins/jqvmap/jqvmap/maps/jquery.vmap.germany');
-		echo $this->Html->script('../assets/plugins/jqvmap/jqvmap/maps/jquery.vmap.usa');
-		echo $this->Html->script('../assets/plugins/jqvmap/jqvmap/data/jquery.vmap.sampledata');
 		echo $this->Html->script('../assets/plugins/flot/jquery.flot');
 		echo $this->Html->script('../assets/plugins/flot/jquery.flot.resize');
 		echo $this->Html->script('../assets/plugins/jquery.pulsate.min');
 		echo $this->Html->script('../assets/plugins/bootstrap-daterangepicker/date');
 		echo $this->Html->script('../assets/plugins/bootstrap-daterangepicker/daterangepicker');
-		echo $this->Html->script('../assets/plugins/gritter/js/jquery.gritter');
-		echo $this->Html->script('../assets/plugins/fullcalendar/fullcalendar/fullcalendar.min');
-		echo $this->Html->script('../assets/plugins/jquery-easy-pie-chart/jquery.easy-pie-chart');
 		echo $this->Html->script('../assets/plugins/jquery.sparkline.min');
 	?>
 	<!-- END PAGE LEVEL PLUGINS -->
@@ -229,13 +215,8 @@
 	<!-- END PAGE LEVEL SCRIPTS -->  
 	<script>
 		jQuery(document).ready(function() {    
-		   // App.init(); // initlayout and core plugins
-		   // Index.init();
-		   // Index.initJQVMAP(); // init index page's custom scripts
-		   // Index.initCalendar(); // init index page's custom scripts
-		   // Index.initCharts(); // init index page's custom scripts
-		   // Index.initChat();
-		   // Index.initMiniCharts();
+		   App.init(); // initlayout and core plugins
+		   Index.init();
 		   // Index.initDashboardDaterange();
 		   // Index.initIntro();
 		});
